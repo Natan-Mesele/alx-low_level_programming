@@ -1,14 +1,14 @@
-#include <ctype.h>
+#include "main.h"
 /**
- *  _isdigit - Check if input is digit
- *  description: Check if input is a digit
- *  @c: int input
- *  Return: 1 or 0
+ *  _isdigit -  checks for checks for a digit (0 through 9).
+ *  @c: c -  Variable
+ *  Return: Always 0.
  */
 int _isdigit(int c)
 {
-if (isdigit(c))
+if (c >= 48 && c <= 57)
+{
 return (1);
-else
+}
 return (0);
-} I
+}
