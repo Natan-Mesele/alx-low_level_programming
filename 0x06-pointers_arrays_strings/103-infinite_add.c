@@ -25,7 +25,8 @@ num = (*n1 - '0') + tens;
 tens = num / 10;
 }
 for (; *n2; n2--, r_index--)
-{										num = (*n2 - '0') + tens;
+{
+num = (*n2 - '0') + tens;
 *(r + r_index) = (num % 10) + '0';
 tens = num / 10;
 }
