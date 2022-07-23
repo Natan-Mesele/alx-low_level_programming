@@ -9,15 +9,17 @@
 int main(int argc, char *argv[])
 {
 int a, b, result;
-if (argc <= 2)
+result = 1;
+if (argc <= 3)
 {
 printf("Error\n");
 return (1);
 }
 /* atoi convert a string to an int */
-a = atoi(argv[1]);
-b = atoi(argv[2]);
-result = a * b;
+for (index = 1; index < argc; index++
+{
+result = result * atoi(argc[index]);
+}
 printf("%d\n", result);
 return (0);
 }
