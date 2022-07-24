@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
- * main - multiply two numbers
- * @argc: arguement count
- * @argv: array of pointers to arguement strings
- * Return: result of multiplication or 1
- **/
+ * main - Program that takes first two integer arguments and prints the product
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 1 if not enough arguments passed in, 0 otherwise
+ */
 int main(int argc, char *argv[])
 {
-int a, b, result;
-result = 1;
-if (argc <= 3)
+int i, j;
+if (argc == 1 || argc == 2)
 {
 printf("Error\n");
 return (1);
 }
-/* atoi convert a string to an int */
-for (index = 1; index < argc; index++
+else
 {
-result = result * atoi(argc[index]);
+j = 1;
+for (i = 1; i < 3; i++)
+j *= atoi(argv[i]);
+printf("%d\n", j);
 }
-printf("%d\n", result);
 return (0);
 }
