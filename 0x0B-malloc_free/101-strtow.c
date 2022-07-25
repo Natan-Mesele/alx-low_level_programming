@@ -23,10 +23,10 @@ w++;
 return (w);
 }
 /**
- * strtow - splits a string into words
- * @str: string to split
- * Return: pointer to an array of strings (Success)
- * or NULL (Error)
+ *  strtow - splits a string into words
+ *  @str: string to split
+ *  Return: pointer to an array of strings (Success)
+ *  or NULL (Error)
  */
 char **strtow(char *str)
 {
@@ -49,7 +49,7 @@ if (c)
 end = i;
 tmp = (char *)malloc(sizeof(char) * (c + 1));
 if (tmp == NULL)
-return (NULL)
+return (NULL);
 while (start < end)
 *tmp++ = str[start++];
 *tmp = '\0';
