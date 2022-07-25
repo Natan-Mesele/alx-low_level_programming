@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints the minimum number of coins to make change for a given amount
- * @argc: arguement count
- * @argv: array of pointers to arguement strings
- * Return: number of coins or 1
+ *  main - prints the minimum number of coins to make change for a given amount
+ *  @argc: arguement count
+ *  @argv: array of pointers to arguement strings
+ *  Return: number of coins or 1
  **/
 int main(int argc, char *argv[])
 {
@@ -25,6 +25,7 @@ if (amount > 10 && amount < 25)
 {
 while (amount >= 10)
 amount -= 10, coins++;
+}
 if (amount > 5 && amount < 10)
 {
 while (amount >= 5)
@@ -35,8 +36,7 @@ if (amount > 2 && amount < 5)
 while (amount >= 2)
 amount -= 2, coins++;
 }
-if (amount == 1 || amount == 2 || amount == 5 ||
-amount == 10 || amount == 25)
+if (amount == 1 || amount == 2 || amount == 5 || amount == 10 || amount == 25)
 {
 coins++;
 }
