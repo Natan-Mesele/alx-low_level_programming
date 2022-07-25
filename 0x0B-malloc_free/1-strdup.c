@@ -1,28 +1,28 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
- * _calloc - function to allocates memory
- * @nmemb: unsigned int type
- * @size: unsigned int type
- * Return: return pointer to array
+ *  _strdup - return a pointer to a newly allocated space in memory
+ *  which contains a copy of the string given as a parameter.
+ *  @str: string
+ *  Return: 0
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+char *_strdup(char *str)
 {
-char *ptr;
-unsigned int count;
-if (nmemb == 0 || size == 0)
+int i = 0, size = 0;
+char *m;
+if (str == NULL)
 return (NULL);
-ptr = malloc(nmemb * size);
-if (ptr == NULL)
-{
+for (; str[size] != '\0'; size++)
+;
+/*+1 on the size puts the end of string character*/
+m = malloc(size * sizeof(*str) + 1);
+if (m == 0)
 return (NULL);
-}
-count = 0;
-while (count < nmemb * size)
+else
 {
-ptr[count] = 0;
-count++;
+for (; i < size; i++)
+m[i] = str[i];
 }
-return (ptr);
+return (m);
 }
