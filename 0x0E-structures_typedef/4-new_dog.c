@@ -28,7 +28,7 @@ if (doge->name == NULL)
 free(doge->name);
 free(doge);
 return (NULL);
-{
+}
 for (k = 0; k <= i; k++)
 doge->name[k] = name[k];
 doge->age = age;
