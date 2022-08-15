@@ -3,6 +3,7 @@
  * Auth: Brennan D Baraban
  */
 #include "lists.h"
+#include <stdlib.h>
 /**
  * pop_listint - Deletes the head node of a listint_t list.
  * @head: A pointer to the address of the
